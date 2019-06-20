@@ -17,7 +17,7 @@ public class HelloServiceImpl implements HelloService {
 
     @Override
     public String hello(String name) {
-        String result = "hello:name-" + DateUtil.format(new Date());
+        String result = "hello:"+name+ DateUtil.format(new Date());
         return result;
     }
 }
