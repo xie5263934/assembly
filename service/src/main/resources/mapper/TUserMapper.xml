@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.TUserMapper">
+    <resultMap id="BaseResultMap" type="com.example.entity.TUser">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="login" jdbcType="VARCHAR" property="login"/>
+        <result column="password" jdbcType="VARCHAR" property="password"/>
+        <result column="role" jdbcType="VARCHAR" property="role"/>
+    </resultMap>
+
+    <sql id="column">
+    id,login,password,role
+  </sql>
+
+    <select id="getUserByName" resultMap="BaseResultMap">
+        select
+        <include refid="column"></include>
+        from t_user where login = #{name}
+    </select>
+
+</mapper>
