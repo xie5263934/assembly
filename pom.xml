@@ -8,6 +8,7 @@
         <module>service</module>
         <module>web</module>
         <module>calculate</module>
+        <module>iterator</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
