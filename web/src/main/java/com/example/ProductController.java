@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ProductController {
 
     @RequestMapping("/info")
-    @PreAuthorize("hasAnyRole('USER')")
+    //@PreAuthorize("hasAnyRole('USER')")
     public String productInfo() {
         String currentUser;
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
